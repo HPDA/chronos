@@ -1,0 +1,100 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: ;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.djcf_menu .menu > li.active:after,
+.djcf_menu .menu > li.active:hover:after,
+.jm-module.white-ms .djcf_menu .menu > li.active:after,
+.jm-module.white-ms .djcf_menu .menu > li.active:hover:after {
+  right: auto;
+  left: 5px;
+}
+.djcf_menu .menu > li:hover:after,
+.jm-module.white-ms .djcf_menu .menu > li:hover:after {
+  right: auto;
+  left: 5px;
+  border-width: 4.5px 5px 4.5px 0;
+  border-color: transparent #5f5f5f transparent transparent;
+  border-color: rgba(0,0,0,0) #5f5f5f rgba(0,0,0,0) rgba(0,0,0,0);
+}
+.dj-slide-title,
+.dj-slide-desc-text,
+.dj-slide-desc-text a {
+  text-align: right !important;
+}
+#djmediatools a.dj-category {
+  float: right !important;
+}
+.dj-galleryGrid .dj-slide {
+  float: right !important;
+}
+.dj-readmore-wrapper {
+  text-align: left !important;
+}
+.djslider {
+  direction: ltr !important;
+}
+.djslider .navigation-container-custom {
+  direction: rtl !important;
+}
+.dj-slideshowThumbs .dj-indicators-in {
+  left: auto !important;
+  right: 0 !important;
+}
+.dj-slideshowThumbs .dj-load-button {
+  float: right !important;
+}
+.dj-tabber .dj-tab img {
+  margin-right: 0 !important;
+  margin-left: 8px !important;
+}
+.box_skitter .info_slide {
+  left: auto;
+  right: 15px;
+}
+.box_skitter .info_slide .image_number {
+  float: right !important;
+}
+.skitter-square .prev_button,
+.skitter-square .next_button {
+  right: auto;
+}
+.skitter-square .prev_button {
+  left: 10px;
+}
+.skitter-square .next_button {
+  left: 65px;
+}
+.slider2-ms .dj-slide-desc-text {
+  padding: 15px 15px 15px 65px !important;
+}
+.slider2-ms .dj-readmore-wrapper {
+  right: auto;
+  left: 0;
+}
+.slider2-ms .dj-readmore-wrapper a {
+  background: url("../images/slider2-readmore_rtl.png") no-repeat center center;
+}

@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   IE8 styles
+   ========================================================================== */
+
+.ch-item.ch-second:hover .ch-info {
+    -ms-transform: none;
+    transform: none;
+}
+.ch-item.ch-second .ch-info .ch-info-back {
+    display: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    filter: alpha(opacity="0");
+}
+.ch-item.ch-second:hover .ch-info .ch-info-back {
+    display: block;
+    opacity: 100;
+    filter: alpha(opacity="100");
+}
+
+html[dir=rtl] .dj-megamenu li ul.dj-submenu > li.parent > a:after {
+    border-width: 4.5px 0 4.5px 5px;
+    border-color: transparent transparent transparent #5f5f5f;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #5f5f5f;
+}
+
+#jm-allpage .btn,
+#jm-allpage .button,
+#jm-allpage button,
+#jm-allpage input.button,
+#jm-allpage .jm-module.white-ms .btn,
+#jm-allpage .jm-module.white-ms .button,
+#jm-allpage .jm-module.white-ms button,
+#jm-allpage .jm-module.white-ms input.button {
+    filter: none!important;
+}
+
+/* classifieds */
+
+html[dir=rtl] #dj-classifieds table.dj-items .main_title th:first-child,
+html[dir=rtl] #dj-classifieds table.dj-items td:first-child,
+html[dir=rtl] #dj-classifieds .dj-useradverts .main_title .main_title_box:first-child .main_title_box_in {
+    border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;    
+}
+
+html[dir=rtl] #dj-classifieds table.dj-items .main_title th:last-child,
+html[dir=rtl] #dj-classifieds table.dj-items td:last-child,
+html[dir=rtl] #dj-classifieds .dj-useradverts .main_title .main_title_box:nth-last-child(2) .main_title_box_in {
+    border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;    
+}

@@ -1,0 +1,421 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: ;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dj-megamenu li.dj-up.active,
+.dj-megamenu li.dj-up:hover,
+.dj-megamenu li.dj-up.hover {
+  background: #ff8400;
+}
+.dj-megamenu li ul.dj-submenu > li:hover > a,
+.dj-megamenu li ul.dj-submenu > li.hover > a,
+.dj-megamenu li ul.dj-submenu > li.active > a,
+.dj-megamenu li ul.dj-subtree > li:hover > a,
+.dj-megamenu li ul.dj-subtree > li.hover > a,
+.dj-megamenu li ul.dj-subtree > li.active > a {
+  color: #ff8400;
+}
+.dj-megamenu li ul.dj-subtree > li > a {
+  background-image: url('../images/style3/li.png');
+}
+#jm-bottom3 {
+  background: #ff8400;
+}
+#jm-footer a:hover {
+  color: #ff8400;
+}
+.nav.menu li:hover > a,
+.nav.menu li.active > a,
+.jm-module.white-ms .nav.menu li:hover > a,
+.jm-module.white-ms .nav.menu li.active > a {
+  color: #ff8400;
+}
+.jm-bottom .nav.menu li:hover > a,
+.jm-bottom .nav.menu li.active > a {
+  color: #ffc280;
+}
+.jm-bottom .nav.menu > li {
+  border-bottom: 1px solid #f27d00;
+}
+.jm-bottom .nav.menu > li.parent:after {
+  border-color: transparent transparent transparent #f27d00;
+  border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #f27d00;
+}
+.jm-bottom .nav.menu > li.parent.deeper:after {
+  border-color: #f27d00 transparent transparent transparent;
+  border-color: #f27d00 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+#jm-top-bar-mod .nav.menu > li a.color {
+  background: #c46602;
+}
+#jm-top-bar-mod .nav.menu > li:hover a.color {
+  background: #ff8400;
+}
+.nav-tabs.nav-stacked li a:hover {
+  color: #ff8400;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: #ff8400;
+}
+.jm-bottom a:hover {
+  color: #ffc280;
+}
+.jm-module.white-ms a:hover {
+  color: #ff8400;
+}
+::selection {
+  background: #ff8400;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #ff8400;
+  color: #fff;
+}
+::-moz-selection {
+  background: #ff8400;
+  color: #fff;
+}
+ul li {
+  background-image: url('../images/style3/li.png');
+}
+.jm-module.white-ms ul li {
+  background-image: url('../images/style3/li.png');
+}
+ul.jm-color li {
+  background-image: url('../images/style2/li.png');
+}
+ul.jm-color2 li {
+  background-image: url('../images/style1/li.png');
+}
+.jm-module.title-color-ms .jm-title {
+  color: #ff8400;
+}
+#jm-allpage .jm-search button.button,
+#jm-allpage .jm-search input.button {
+  background-image: url("../images/style3/search.png");
+}
+.btn,
+a.button,
+input.button,
+button.button,
+.jm-module.white-ms .btn,
+.jm-module.white-ms a.button,
+.jm-module.white-ms input.button,
+.jm-module.white-ms button.button {
+  color: #fff !important;
+  background-color: #f47e00;
+  background-image: -moz-linear-gradient(top,#ff8400,#e37500);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#ff8400),to(#e37500));
+  background-image: -webkit-linear-gradient(top,#ff8400,#e37500);
+  background-image: -o-linear-gradient(top,#ff8400,#e37500);
+  background-image: linear-gradient(to bottom,#ff8400,#e37500);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff8400', endColorstr='#ffe37500', GradientType=0);
+  text-shadow: 0px -1px 1px #c46602;
+  -webkit-box-shadow: inset 0px -1px 1px 0px #c46602;
+  -moz-box-shadow: inset 0px -1px 1px 0px #c46602;
+  box-shadow: inset 0px -1px 1px 0px #c46602;
+}
+.btn:hover,
+a.button:hover,
+input.button:hover,
+button.button:hover,
+.jm-module.white-ms .btn:hover,
+.jm-module.white-ms a.button:hover,
+.jm-module.white-ms input.button:hover,
+.jm-module.white-ms button.button:hover {
+  background: #e37500;
+}
+.jm-bottom .btn,
+.jm-bottom a.button,
+.jm-bottom input.button,
+.jm-bottom button.button {
+  color: #e37500 !important;
+  -webkit-box-shadow: inset 0px -1px 1px 0px #c46602;
+  -moz-box-shadow: inset 0px -1px 1px 0px #c46602;
+  box-shadow: inset 0px -1px 1px 0px #c46602;
+}
+p.readmore a,
+a.readmore,
+.mod-articles-category-readmore a,
+.jm-module.white-ms p.readmore a,
+.jm-module.white-ms a.readmore,
+.jm-module.white-ms .mod-articles-category-readmore a {
+  color: #ff8400 !important;
+}
+p.readmore a:hover,
+a.readmore:hover,
+.mod-articles-category-readmore a:hover,
+.jm-module.white-ms p.readmore a:hover,
+.jm-module.white-ms a.readmore:hover,
+.jm-module.white-ms .mod-articles-category-readmore a:hover {
+  color: #ff8400 !important;
+}
+.jm-bottom p.readmore a:hover,
+.jm-bottom a.readmore:hover,
+.jm-bottom .mod-articles-category-readmore a:hover {
+  color: #ffc280 !important;
+}
+#jm-allpage .readmore2,
+#jm-allpage .jm-module.white-ms .readmore2 {
+  border: 1px solid #ffc280;
+  color: #ff8400 !important;
+}
+#jm-allpage .readmore2:hover,
+#jm-allpage .jm-module.white-ms .readmore2:hover {
+  background: #ff8400;
+}
+#jm-allpage .jm-bottom .readmore2 {
+  border: 1px solid #ffc280;
+  color: #ffc280 !important;
+}
+#jm-allpage .jm-bottom .readmore2:hover {
+  background: #ffc280;
+}
+.page-header h2 a:hover,
+h2.item-title a:hover,
+.cat-children > h3 a:hover,
+.contact-category > h2 a:hover,
+.weblink-category > h2 a:hover,
+.newsfeed > h2 a:hover,
+.newsfeed-category > h2 a:hover,
+.tag-category h2 a:hover {
+  color: #ff8400;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background: #ff8400;
+}
+.pager li > a:hover,
+.pager li > span:hover {
+  background: #ff8400;
+}
+div.pagination ul li span.pagenav {
+  background: #ff8400;
+}
+div.pagination ul li a:hover {
+  background: #ff8400 !important;
+}
+.ch-item.ch-first .ch-info,
+.ch-item.ch-second .ch-info .ch-info-back,
+.ch-item.ch-third .ch-info .ch-info-back {
+  background: #ff8400;
+}
+#dj-classifieds .djcf_items_blog .item_desc .label_title {
+  background: url("../images/style3/desc.png") no-repeat left top;
+}
+#dj-classifieds .blog_det .price .label_title {
+  background: url("../images/style3/price.png") no-repeat left top;
+}
+#dj-classifieds .blog_det .region .label_title {
+  background: url("../images/style3/region.png") no-repeat left top;
+}
+#dj-classifieds .blog_det .category .label_title {
+  background: url("../images/style3/category.png") no-repeat left top;
+}
+#dj-classifieds .blog_det .cf_box .label_title {
+  background: url("../images/style3/details.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .general_det .djcf_contact span.row_label {
+  background: url("../images/style3/desc.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .general_det .added span.row_label {
+  background: url("../images/style3/added.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .general_det .user_name span.row_label {
+  background: url("../images/style3/created.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .description h2 {
+  background: url("../images/style3/desc.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .custom_det h2 {
+  background: url("../images/style3/details.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .localization_det h2 {
+  background: url("../images/style3/region.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .additional h2 {
+  background: url("../images/style3/details.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .video_box h2 {
+  background: url("../images/style3/video.png") no-repeat left top;
+}
+#dj-classifieds .dj-item .djcf_comments h2 {
+  background: url("../images/style3/comments.png") no-repeat left top;
+}
+#dj-classifieds table.dj-items td.name h3 a:hover {
+  color: #ff8400;
+}
+#dj-classifieds .djcf_items_blog .item_img:after {
+  background: #ff8400;
+}
+#dj-classifieds .see_details_box {
+  border: 1px solid #ffc280;
+}
+#dj-classifieds .see_details_box:hover {
+  background: #ff8400;
+}
+#dj-classifieds .see_details_box a {
+  color: #ff8400;
+}
+#dj-classifieds .button#ask_form_button,
+#dj-classifieds .gm_drive_dir input.button {
+  border: 1px solid #ffc280 !important;
+  color: #ff8400 !important;
+}
+#dj-classifieds .button#ask_form_button:hover,
+#dj-classifieds .gm_drive_dir input.button:hover {
+  background: #ff8400;
+}
+#dj-classifieds .dj-item .general_det .price_wrap {
+  background: #ff8400;
+  border-bottom: 4px solid #c46602;
+}
+#dj-classifieds .dj-item .general_det .price_wrap .row_negotiable {
+  color: #ffc280;
+}
+.mod_djclassifieds_items div.title a.title:after {
+  background: #ff8400;
+}
+.mod_djclassifieds_items div.title a.title:hover,
+.jm-module.white-ms .mod_djclassifieds_items div.title a.title:hover {
+  color: #ff8400;
+}
+.jm-bottom .mod_djclassifieds_items div.title a.title:hover {
+  color: #ffc280;
+}
+.jm-bottom .mod_djclassifieds_items div.title a.title:after {
+  background: #e37500;
+}
+.jm-bottom .mod_djclassifieds_items .item:before,
+.jm-bottom .mod_djclassifieds_items .item:after {
+  border-color: #f27d00;
+}
+.jm-bottom .mod_djclassifieds_items div.title span.category a.title_cat {
+  color: #ffc280;
+}
+.jm-bottom .djcf_user_points .djcf_upoints_box {
+  border-bottom: 1px solid #f27d00;
+}
+.djcf_user_points ul.menu li:hover > a,
+.djcf_user_points ul.menu li.active > a,
+.djcf_user_menu ul.menu li:hover > a,
+.djcf_user_menu ul.menu li.active > a,
+.jm-module.white-ms .djcf_user_points ul.menu li:hover > a,
+.jm-module.white-ms .djcf_user_points ul.menu li.active > a,
+.jm-module.white-ms .djcf_user_menu ul.menu li:hover > a,
+.jm-module.white-ms .djcf_user_menu ul.menu li.active > a {
+  color: #ff8400;
+}
+.jm-bottom .djcf_user_points ul.menu li:hover > a,
+.jm-bottom .djcf_user_points ul.menu li.active > a,
+.jm-bottom .djcf_user_menu ul.menu li:hover > a,
+.jm-bottom .djcf_user_menu ul.menu li.active > a {
+  color: #ffc280;
+}
+.jm-bottom .djcf_user_points ul.menu > li,
+.jm-bottom .djcf_user_menu ul.menu > li {
+  border-bottom: 1px solid #f27d00;
+}
+.jm-bottom .djcf_menu .menu > li.active:after,
+.jm-bottom .djcf_menu .menu > li.active:hover:after {
+  border-color: #f27d00 transparent transparent transparent;
+  border-color: #f27d00 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+.jm-bottom .djcf_menu .menu > li:hover:after {
+  border-color: transparent transparent transparent #f27d00;
+  border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #f27d00;
+}
+#dj-classifieds .dj-additem .djmap_intro .button {
+  color: #fff !important;
+  background-color: #f47e00;
+  background-image: -moz-linear-gradient(top,#ff8400,#e37500);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#ff8400),to(#e37500));
+  background-image: -webkit-linear-gradient(top,#ff8400,#e37500);
+  background-image: -o-linear-gradient(top,#ff8400,#e37500);
+  background-image: linear-gradient(to bottom,#ff8400,#e37500);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff8400', endColorstr='#ffe37500', GradientType=0);
+  text-shadow: 0px -1px 1px #c46602;
+  -webkit-box-shadow: inset 0px -1px 1px 0px #c46602;
+  -moz-box-shadow: inset 0px -1px 1px 0px #c46602;
+  box-shadow: inset 0px -1px 1px 0px #c46602;
+}
+#dj-classifieds .dj-additem .djmap_intro .button:hover {
+  background: #e37500;
+}
+.dj-slide-title a:hover,
+.dj-ctitle-in:hover,
+.dj-slide-desc-text a:hover {
+  color: #ff8400 !important;
+}
+.dj-tabber .dj-tab-active,
+.jm-module.white-ms .dj-tabber .dj-tab-active {
+  background: #ff8400 !important;
+}
+.dj-tabber .dj-tab-indicator-right,
+.jm-module.white-ms .dj-tabber .dj-tab-indicator-right {
+  background: url("../images/style3/dj-tabber-arrow-right.png") no-repeat left center !important;
+}
+.dj-tabber .dj-tab-indicator-left,
+.jm-module.white-ms .dj-tabber .dj-tab-indicator-left {
+  background: url("../images/style3/dj-tabber-arrow-left.png") no-repeat left center !important;
+}
+.jm-bottom .dj-tabber .dj-tab-active {
+  background: #ffc280 !important;
+}
+.jm-bottom .dj-tabber .dj-tab-indicator-right {
+  background: url("../images/style3/dj-tabber-arrow-right-light.png") no-repeat left center !important;
+}
+.jm-bottom .dj-tabber .dj-tab-indicator-left {
+  background: url("../images/style3/dj-tabber-arrow-left-light.png") no-repeat left center !important;
+}
+.slider1-ms .dj-navigation-in .dj-next:hover,
+.slider1-ms .dj-navigation-in .dj-prev:hover,
+.slider1-ms .dj-navigation .dj-play:hover,
+.slider1-ms .dj-navigation .dj-pause:hover,
+.slider1-ms .navigation-container .next-button:hover,
+.slider1-ms .navigation-container .prev-button:hover,
+.slider1-ms .navigation-container .play-button:hover,
+.slider1-ms .navigation-container .pause-button:hover {
+  background-color: #ff8400;
+}
+.jm-bottom .slider1-ms .dj-navigation-in .dj-next:hover,
+.jm-bottom .slider1-ms .dj-navigation-in .dj-prev:hover,
+.jm-bottom .slider1-ms .dj-navigation .dj-play:hover,
+.jm-bottom .slider1-ms .dj-navigation .dj-pause:hover,
+.jm-bottom .slider1-ms .navigation-container .next-button:hover,
+.jm-bottom .slider1-ms .navigation-container .prev-button:hover,
+.jm-bottom .slider1-ms .navigation-container .play-button:hover,
+.jm-bottom .slider1-ms .navigation-container .pause-button:hover {
+  background-color: #ffc280;
+}

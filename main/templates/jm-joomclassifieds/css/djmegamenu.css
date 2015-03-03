@@ -1,0 +1,367 @@
+/*--------------------------------------------------------------
+ # Copyright (C) joomla-monster.com
+ # License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+ # Website: http://www.joomla-monster.com
+ # Support: info@joomla-monster.com
+ ---------------------------------------------------------------*/
+
+/* DJMENU */
+
+.dj-megamenu {
+    margin: 0 !important;
+    position: relative;
+    z-index: 500;
+    font-weight: 600;
+    border: 1px solid #c9c9c9;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.dj-megamenu li.dj-up {
+    position: relative;
+    display: block;
+    float: left;
+    border-left: 1px solid #c9c9c9;
+    background: #fff;
+    -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    padding: 0;
+}
+
+.dj-megamenu li.dj-up:first-child {
+    border-left: none;
+    padding: 0 0 0 1px;
+}
+
+.dj-megamenu.hasSubtitles li a.dj-up_a span {
+    line-height: 34px;
+}
+
+.dj-megamenu li a.dj-up_a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 46px;
+    line-height: 46px;
+    cursor: pointer;
+    color: #372f2b;
+}
+
+.dj-megamenu li a.dj-up_a span {
+    display: block;
+}
+
+.dj-megamenu li.active a.dj-up_a,
+.dj-megamenu li:hover a.dj-up_a,
+.dj-megamenu li.hover a.dj-up_a {
+    color: #fff;
+}
+
+.dj-megamenu li a.dj-up_a span.dj-drop {
+    padding: 0 25px 0 0 !important;
+    position: relative;
+    z-index: 201;
+}
+
+.dj-megamenu li a.dj-up_a span.dj-drop:after {
+    content: '';
+    position: absolute;
+    top: 21px;
+    right: 5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 5px 4.5px 0 4.5px;
+    border-color: #5f5f5f transparent transparent transparent;
+    border-color: #5f5f5f rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.dj-megamenu.hasSubtitles li a.dj-up_a span.dj-drop:after {
+    top: 14px;
+}
+
+.dj-megamenu li.active a.dj-up_a span.dj-drop:after,
+.dj-megamenu li:hover a.dj-up_a span.dj-drop:after,
+.dj-megamenu li.hover a.dj-up_a span.dj-drop:after {
+    border-color: #ffffff transparent transparent transparent;
+    border-color: #ffffff rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.dj-megamenu li a.dj-up_a small.subtitle {
+    display: block;
+    font-size: 11px;
+    color: #b7b7b7;
+    text-transform: none;
+    line-height: 1.2em;
+    margin-top: -10px;
+    font-weight: 300;
+}
+
+.dj-megamenu li.active a.dj-up_a small.subtitle,
+.dj-megamenu li:hover a.dj-up_a small.subtitle,
+.dj-megamenu li.hover a.dj-up_a small.subtitle {
+    color: #fff;
+}
+
+.dj-megamenu li.separator > a {
+    cursor: default;
+}
+
+/* sticky */
+
+.dj-megamenu-sticky ul.dj-megamenu {
+    border: none;
+}
+
+.dj-megamenu-sticky {
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.dj-megamenu-sticky li.dj-up:first-child {
+    border: none!important;
+}
+
+/* Default list styling */
+.dj-megamenu li:hover,
+.dj-megamenu li.hover {
+    position: relative;
+    z-index: 200;
+}
+
+/* Hide submenus */
+
+.dj-megamenu li div.dj-subwrap,
+.dj-megamenu li:hover div.dj-subwrap li div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap li div.dj-subwrap {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Show first level submenu */
+
+.dj-megamenu li:hover div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap {
+    left: 0;
+    top: 46px;
+    height: auto;
+    z-index: 300;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 0px 1px 1px 0px #e2e2e2;
+    box-shadow: 0px 1px 1px 0px #e2e2e2; 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.dj-megamenu li:hover div.dj-subwrap.multiple_cols,
+.dj-megamenu li.hover div.dj-subwrap.multiple_cols {
+    -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: content-box;    /* Firefox, other Gecko */
+    box-sizing: content-box;         /* Opera/IE 8+ */
+}
+
+/* width if one column */
+.dj-megamenu li:hover div.dj-subwrap.single_column,
+.dj-megamenu li.hover div.dj-subwrap.single_column {
+    width: auto!important;
+}
+
+/* Show higher level submenus */
+.dj-megamenu li:hover div.dj-subwrap li:hover > div.dj-subwrap,
+.dj-megamenu li.hover div.dj-subwrap li.hover > div.dj-subwrap {
+    left: 100%;
+    top: -6px;
+    margin: 0;
+    height: auto;
+    z-index: 400;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.dj-megamenu li:hover div.dj-subwrap li:hover > div.dj-subwrap .dj-subcol,
+.dj-megamenu li.hover div.dj-subwrap li.hover > div.dj-subwrap .dj-subcol {
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 0px 1px 1px 0px #e2e2e2;
+    box-shadow: 0px 1px 1px 0px #e2e2e2; 
+}
+
+/* Submenu elements styles - drop down */
+
+.dj-submenu li {
+    margin: 0;
+    padding: 5px 0;
+    background: none;
+}
+
+.dj-megamenu li div.dj-subcol {
+    float: left;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.dj-megamenu li ul.dj-submenu { 
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.dj-megamenu li ul.dj-submenu > li {
+    display: block;
+    height: auto;
+    position: relative;
+    width: auto;
+    padding: 0 13px;
+}
+
+.dj-megamenu li ul.dj-submenu > li > a {
+    color: #372f2b;
+    display: block;
+    font-size: 13px;
+    line-height: 19px;
+    text-decoration: none;
+    padding: 10px 0;
+    border-top: 1px solid #ebeae9;
+}
+
+.dj-megamenu li ul.dj-submenu > li.first > a {
+    border-top: 1px solid transparent;
+}
+
+.dj-megamenu li ul.dj-submenu > li > a small.subtitle {
+    display: block;
+    font-size: 11px;
+}
+
+.dj-megamenu li ul.dj-submenu > li.parent > a {
+    position: relative;
+}
+
+.dj-megamenu li ul.dj-submenu > li.parent > a:after {
+    content: '';
+    position: absolute;
+    top: 17px;
+    right: 5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4.5px 0 4.5px 5px;
+    border-color: transparent transparent transparent #5f5f5f;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #5f5f5f;
+}
+
+/* image menu */
+
+.dj-megamenu li a span.image-title {
+    margin: 0 0 0 15px;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.dj-megamenu li a.dj-up_a img {
+    max-height: 30px;
+    max-width: none;
+    vertical-align: middle;
+}
+
+.dj-megamenu li ul.dj-submenu > li > a img {
+    max-height: 16px;
+}
+
+/* Submenu elements styles - tree */
+
+.dj-megamenu li ul.dj-subtree {
+    list-style: none outside;
+    padding: 0 !important;
+    margin: 0!important;
+}
+
+.dj-submenu > li > ul.dj-subtree {
+    margin: 0 0 12px 15px!important;    
+}
+
+.dj-megamenu li ul.dj-subtree > li {
+    list-style: none outside;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.dj-megamenu li ul.dj-subtree > li > a {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-position: left 10px;
+    background-repeat: no-repeat;
+}
+
+.dj-megamenu li ul.dj-subtree > li > a small.subtitle {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+/* modules loaded into menu */
+
+.dj-megamenu .modules-wrap {
+    padding: 10px 0;
+}
+.dj-megamenu .modules-wrap p {
+    display: block !important;
+    padding: 0 !important;
+}
+
+.dj-megamenu .moduletable {
+    clear: both;
+}
+
+.dj-megamenu .modules-wrap .moduletable > h3 {
+    color: #372F2B;
+    font-weight: 600;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.dj-megamenu .modules-wrap .moduletable {
+    padding: 30px 0 0;
+    margin: 30px 0 0;
+    position: relative;
+}
+
+.dj-megamenu .modules-wrap .moduletable:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 0;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.dj-megamenu .modules-wrap .moduletable:first-child {
+    padding: 0;
+    margin: 0;
+}
+
+.dj-megamenu .modules-wrap .moduletable:first-child:after {
+    display: none;
+}

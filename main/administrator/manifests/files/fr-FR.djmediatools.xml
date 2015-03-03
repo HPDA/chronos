@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="2.5" client="site" method="upgrade">
+    <name>French language pack for DJ-Mediatools by Vianney Zahner</name>
+	<creationDate>16 Janvier 2014</creationDate>
+    <author>IMDEV</author>
+	<copyright>Copyright (C) 2003-2013 IMDEV</copyright>
+    <license>http://www.gnu.org/licenses GNU/GPL</license>
+    <authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+    <version>2.0.4</version>
+    <description>French translation for DJ-Mediatools</description>
+	<fileset>
+		<files folder="administrator" target="administrator/language/fr-FR">
+			<filename>fr-FR.com_djmediatools.ini</filename>
+			<filename>fr-FR.com_djmediatools.sys.ini</filename>
+			<filename>fr-FR.plg_content_djmediatools.ini</filename>
+			<filename>fr-FR.plg_content_djmediatools.sys.ini</filename>
+			<filename>fr-FR.plg_djmediatools_content.ini</filename>
+			<filename>fr-FR.plg_djmediatools_content.ini</filename>
+			<filename>fr-FR.plg_djmediatools_djcatalog2.ini</filename>
+			<filename>fr-FR.plg_djmediatools_djcatalog2.sys.ini</filename>
+			<filename>fr-FR.plg_djmediatools_djclassifieds.ini</filename>
+			<filename>fr-FR.plg_djmediatools_djclassifieds.sys.ini</filename>
+			<filename>fr-FR.plg_djmediatools_folder.ini</filename>
+			<filename>fr-FR.plg_djmediatools_folder.sys.ini</filename>
+			<filename>fr-FR.plg_djmediatools_k2.ini</filename>
+			<filename>fr-FR.plg_djmediatools_k2.sys.ini</filename>
+			<filename>fr-FR.plg_djmediatools_virtuemart.ini</filename>
+			<filename>fr-FR.plg_djmediatools_virtuemart.sys.ini</filename>
+			<filename>fr-FR.plg_editors-xtd_djmediatools.ini</filename>
+			<filename>fr-FR.plg_editors-xtd_djmediatools.sys.ini</filename>
+		</files>
+		<files folder="site" target="language/fr-FR">
+			<filename>fr-FR.com_djmediatools.ini</filename>
+			<filename>fr-FR.mod_djmediatools.ini</filename>
+			<filename>fr-FR.mod_djmediatools.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>

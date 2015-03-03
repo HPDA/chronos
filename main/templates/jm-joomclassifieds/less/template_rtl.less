@@ -1,0 +1,657 @@
+/*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   VARIABLES import
+   ========================================================================== */
+  
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+/* ==========================================================================
+   MIXINS import
+   ========================================================================== */
+  
+@import "template_mixins.less";
+@import "../../../plugins/system/jmframework/includes/assets/template/bootstrap/less/mixins.less";
+
+/* ==========================================================================
+   DJ-MENU styles
+   ========================================================================== */
+  
+body .dj-megamenu {
+  li.dj-up {
+    float: right;
+    border-right: 1px solid #c9c9c9;
+    border-left: none;
+  }
+  li a.dj-up_a {
+    float: right;
+  }
+  li.dj-up:first-child {
+    border-right: none;
+    padding: 0 1px 0 0;
+  }
+  li a.dj-up_a span.dj-drop {
+    padding: 0 0 0 25px !important;
+  }
+  li a.dj-up_a span.dj-drop:after {
+    right: auto;
+    left: 5px;
+  }
+  li div.dj-subwrap,
+  li:hover div.dj-subwrap li div.dj-subwrap,
+  li.hover div.dj-subwrap li div.dj-subwrap {
+    left: auto;
+    right: -9999px;
+  }
+  li:hover div.dj-subwrap,
+  li.hover div.dj-subwrap {
+    left: auto;
+    right: 0;
+  }
+  li:hover div.dj-subwrap li:hover > div.dj-subwrap,
+  li.hover div.dj-subwrap li.hover > div.dj-subwrap {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 8px solid transparent;
+  }
+  li div.dj-subcol {
+    float: right;
+  }
+  li ul.dj-submenu > li.parent > a:after {
+    right: auto;
+    left: 5px;
+    border-width: 4.5px 5px 4.5px 0;
+    border-color: transparent #5f5f5f transparent transparent;
+    border-color: rgba(0,0,0,0) #5f5f5f rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+  li a span.image-title {
+    margin: 0 15px 0 0;
+  }
+  > li > ul.dj-subtree {
+    margin: 0 15px 12px 0!important;    
+  }
+  li ul.dj-subtree > li {
+    padding: 0 10px 0 0;
+  }
+  li ul.dj-subtree > li > a {
+    background-position: right 10px;
+  }
+}
+
+/* opera fix scroller */
+
+noindex:-o-prefocus,
+body .dj-megamenu li.dj-up {
+    overflow: hidden;
+}
+
+noindex:-o-prefocus,
+body .dj-megamenu li.dj-up:hover,
+body .dj-megamenu li.dj-up.hover {
+    overflow: visible;
+}
+
+noindex:-o-prefocus, .dj-megamenu li div.dj-subwrap, 
+body .dj-megamenu li:hover div.dj-subwrap li div.dj-subwrap, 
+body .dj-megamenu li.hover div.dj-subwrap li div.dj-subwrap {
+    right: auto;
+}  
+
+/* ==========================================================================
+   LAYOUT styles
+   ========================================================================== */
+ 
+#jm-top-bar-mod {
+    text-align: left;
+}
+
+#jm-top-mod1-in {
+    padding-right: 0;
+    padding-left: @JMbaseSpace;
+}
+
+#jm-top-mod2-in {
+    padding-left: 0;
+    padding-right: @JMbaseSpace;
+}
+
+#jm-font-switcher {
+    text-align: left;
+}  
+
+#jm-footer-center {
+    text-align: right;
+}
+
+#jm-footer-right {
+    text-align: left;
+}
+
+#jm-back-top {
+    margin-right: 0;
+    margin-left: 20px;
+    right: auto;
+    left: 0;
+}
+
+/* grid */
+
+.jm-grid {
+    [class*="span"] {
+        float: right;
+    }
+    .row > [class*="-in"] > [class*="-bg"],
+    .row-fluid > [class*="-in"] > [class*="-bg"] {
+        margin-left: 0;
+        margin-right: @JMbaseSpace;
+    }
+    .row,
+    .row-fluid {
+        margin-left: 0;
+        margin-right: -@JMbaseSpace;
+        width: auto;
+    }
+}
+
+#jm-logo-sitedesc {
+     #jm-sitedesc {
+       padding: 0 10px 0 0;
+    }
+}
+
+
+/* ==========================================================================
+   MODULES styles
+   ========================================================================== */
+
+/* title-border1-ms */
+
+.jm-module.title-border1-ms .jm-title {
+  &:after {
+    left: auto;
+    right: 0;
+  }
+}
+
+/* search */
+
+#jm-allpage .jm-search {
+  .inputbox.first_input,
+  .inputbox.search-query {
+    text-align: right;
+    padding: 0 20px 0 45px;
+  }
+  button.button,
+  input.button {
+    right: auto;
+    left: 20px;
+  }
+}
+
+.jm-advanced {
+    text-align: left;
+}
+
+/* modules in top-mod */
+
+#jm-top-mod1:after {
+    border-left: none;
+    border-right: 1px dotted @JMtopmodBorderColor;
+    left: auto;
+    right: 60%;
+}
+
+#jm-top-mod {
+  .jm-module-in:after {
+    left: 0;
+    right: 5%;
+  }
+}
+
+/* logout topbar */
+
+#jm-top-bar-mod {
+  .logout-button .btn {
+    margin-left: 0!important;
+    margin-right: 10px!important;
+  }
+}
+
+/** jmmoduleraw **/
+
+.jm-module-raw {
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.jm-module-raw:first-child {
+    margin-right: 0;
+}
+
+/* ==========================================================================
+   EDITOR OF LAYOUT styles
+   ========================================================================== */
+
+.jm-special .td1 {
+    float: right;
+}
+
+.jm-special .td2 {
+    float: right;
+}
+
+.jm-special .td3 {
+    float: right; text-align: left;
+}   
+
+/** tooltip-icon **/
+
+.jm-tooltip-icon {
+    float: right;
+}
+
+.jm-block {
+  padding: 0 60px 0 0;
+  span {
+    right: 0;
+    left: auto;
+  }
+}
+  
+.jm-code {
+  background-position: center right;
+  border-left: none;
+  border-right-width: 5px;
+  border-right-style: solid;
+}
+
+p.blue {
+  border-left: none;
+  border-right: 3px solid #BCE8F1;
+  padding: 0 10px 0 0;
+}
+
+p.green {
+  border-left: none;
+  border-right: 3px solid #D6E9C6;
+  padding: 0 10px 0 0;
+}
+
+p.red {
+  border-left: none;
+  border-right: 3px solid #EED3D7;
+  padding: 0 10px 0 0;
+}
+
+p.jmbadge,
+p.jmcalendar,
+p.jmchat,
+p.jmcheck,
+p.jmcloud,
+p.jmdirection,
+p.jmdivide,
+p.jmerror,
+p.jmfire,
+p.jmflag,
+p.jmheart,
+p.jmhome,
+p.jminfo,
+p.jmlist,
+p.jmmail,
+p.jmpeople,
+p.jmstar,
+p.jmstat {
+  padding-left: 0;
+  padding-right: 60px;
+  background-position: right top;
+}
+
+
+/* ==========================================================================
+   JOOMLA COMPONENT styles
+   ========================================================================== */
+  
+//all articles
+.article-info a {
+  display: inline-block;
+}
+
+.item-image {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.content_vote label {
+  margin: 0 0 0 5px;
+}
+
+.badge {
+  display: inline-block;
+}
+
+//article categories
+.categories-list .collapse {
+  padding: 0 20px 0 0;
+}
+
+//article category list
+.category-list {
+  .filters .btn-group label {
+    margin: 0 0 0 5px;
+  }
+}
+
+//contact single category
+.contact-category .btn-group span.label {
+  margin-right: 0;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+//featured contacts
+table.category {
+  th, 
+  td {
+    text-align: right;
+  }
+}
+
+//single contact
+.contact-position,
+.contact-address {
+    .jicons-text {
+        margin-right: 0;
+        margin-left: 10px;
+        text-align: right;
+    }
+    .jicons-icons {
+        margin-right: 0;
+        margin-left: 10px;
+        text-align: right;
+    }
+}
+
+//weblinks single category
+.weblink-category {
+  .btn-group span.label {
+    margin-right: 0;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//news feed categories
+.newsfeed-count {
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//news feed category
+.newsfeed-category .btn-group span.label {
+  margin-right: 0;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+//search component
+.phrases-box,
+    fieldset.only {
+        label {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+} 
+
+//tag-category
+.tag-category .form-inline label {
+    margin-right: 0;
+    margin-left: 10px;
+} 
+
+.tags .label-info {
+    display: inline-block;
+}
+
+//article-index
+.article-index {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/** choosen **/
+
+.chzn-container-multi .chzn-choices li {
+  float: right;
+}
+
+.chzn-container-single .chzn-single {
+  padding: 0 8px 0 0;
+}
+
+.chzn-container-single .chzn-single span {
+  margin-right: 0;
+  margin-left: 26px;
+}
+
+.chzn-container-single .chzn-single div {
+  right: auto;
+  left: 0;
+}
+
+/* ==========================================================================
+   JOOMLA MODULES styles
+   ========================================================================== */
+
+//newsflash module
+.newsflash {
+    .readmore {
+        float: left;
+    }
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 0 0 10px;
+  }
+}
+
+/* ==========================================================================
+   BOOTSTRAP OVERRIDE styles
+   ========================================================================== */
+
+p.readmore,
+p.mod-articles-category-readmore {
+  text-align: left;
+}
+
+p.readmore a,
+a.readmore,
+.mod-articles-category-readmore a {
+  &::before {
+    margin-right: 5px;
+    content: '[';
+    .translateX(-20px);
+  }
+  &::after {
+    margin-left: 5px;
+    content: ']';
+    .translateX(20px);
+  }
+}
+
+// Navs
+// --------------------------
+
+.nav.menu {
+  li a {
+    padding: 10px 0 10px 20px;
+  }
+  > li.parent:after {
+    right: auto;
+    left: 5px;
+    border-width: 4.5px 5px 4.5px 0;
+    border-color: transparent @JMmenuArrowColor transparent transparent;
+    border-color: rgba(0,0,0,0) @JMmenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+  ul {
+    padding: 0 20px 0 0;
+  }
+}
+
+/** menu in module white-ms **/
+.jm-module.white-ms .nav.menu {
+  > li.parent:after {
+    border-color: transparent @JMmenuArrowColor transparent transparent;
+    border-color: rgba(0,0,0,0) @JMmenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+}
+
+/** top-bar menu **/
+#jm-top-bar-mod .nav.menu {
+  > li a {
+    border-left: none;
+    border-right: 1px solid @JMmenuTopbarBorderColor;
+  }
+}
+
+/** tags **/
+.tagspopular ul,
+.tagssimilar ul,
+.nav.menu.tags {
+  > li {
+    margin: 0 0 10px 10px;
+  }
+}
+
+.tagspopular ul,
+.tagssimilar ul {
+  > li {
+    margin: 0 0 10px 6px;
+  }
+}
+
+#jm-allpage .tags {
+  > span {
+    margin: 0 0 10px 1px;
+  }
+}
+
+// Template details
+// --------------------------
+
+div.pagination {
+  li {
+    margin: 0 0 0 20px;
+  }
+}
+
+.nav-tabs {
+    > li {
+        float: right;
+        margin: 0 0 0 1px;
+    } 
+}
+
+dl.tabs dt.tabs {
+    float: right;
+    margin: 0 0 0 1px;
+}
+
+.tab-content,
+dd.tabs {
+  .border-radius(5px 0 5px 5px);
+}
+
+#jm-allpage table thead tr th:first-child {
+  .border-radius(0 5px 5px 0);
+}
+
+#jm-allpage table thead tr th:last-child {
+  .border-radius(5px 0 0 5px);
+}
+
+h1.componentheading,
+.category-list > h2,
+.tag-category > h2,
+.page-header > h1,
+.blog > h2,
+.blog-featured > h1,
+.login > h1,
+.registration > h1 {
+  &:after {
+    left: auto;
+    right: 0;
+  } 
+}
+
+ul li {
+  padding: 0 12px 0 0;
+  background-position: right 9px;
+}
+
+.jm-bottom ul li {
+  background-image: url('../images/li_white_RTL.png');
+}
+
+// Bootstrap values
+// ---------------------
+
+//fix
+.input-append.input-prepend {
+  .btn + .btn {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+  }
+}
+
+.input-append,
+.input-prepend {
+  .add-on {
+    margin-right: 0;
+    margin-left: -1px;
+  }  
+}
+
+.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child, .input-prepend.input-append input:last-child {
+  .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+}
+
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+  .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+}
+
+.input-append .add-on:last-child, .input-append .btn:last-child {
+  .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+}
+
+.input-append input, .input-append select, .input-append .uneditable-input {
+  .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+}
+
+.btn-toolbar a.btn:first-child {
+  margin-left: 5px;
+}
+
+.nav-tabs:before, .nav-tabs:after, .nav-pills:before, .nav-pills:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+
+.nav-tabs:after, .nav-pills:after {
+  clear: both;
+}

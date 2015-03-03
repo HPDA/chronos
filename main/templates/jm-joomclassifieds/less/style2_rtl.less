@@ -1,0 +1,500 @@
+/*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   VARIABLES import
+   ========================================================================== */
+  
+@import "template_variables.less";
+
+@import "template_mixins.less";
+@import "../../../plugins/system/jmframework/includes/assets/template/bootstrap/less/mixins.less";
+
+/* ==========================================================================
+   style2 RTL styles
+   ========================================================================== */
+
+// DJ Megamenu
+// -------------------------- 
+
+.dj-megamenu li.dj-up.active,   
+.dj-megamenu li.dj-up:hover,
+.dj-megamenu li.dj-up.hover {
+  background: @JMstyle2MegamenuActiveBackground; 
+}    
+
+.dj-megamenu li ul.dj-submenu > li:hover > a,
+.dj-megamenu li ul.dj-submenu > li.hover > a,
+.dj-megamenu li ul.dj-submenu > li.active > a,
+.dj-megamenu li ul.dj-subtree > li:hover > a,
+.dj-megamenu li ul.dj-subtree > li.hover > a,
+.dj-megamenu li ul.dj-subtree > li.active > a {
+  color: @JMstyle2MegamenuSubmenuActiveFontColor;
+}
+
+.dj-megamenu li ul.dj-subtree > li > a {
+  background-image: url('../images/style2/li_RTL.png');
+}
+
+// Layout
+// -------------------------- 
+
+#jm-bottom3 {
+  background: @JMstyle2BottomBackground;
+}
+
+#jm-footer a:hover {
+  color: @JMstyle2Link;
+}
+
+// Menu
+// -------------------------- 
+
+.nav.menu li:hover > a,
+.nav.menu li.active > a,
+.jm-module.white-ms .nav.menu li:hover > a,
+.jm-module.white-ms .nav.menu li.active > a {
+  color: @JMstyle2MenuActiveFontColor;
+}
+
+/** menu in bottom3 **/
+.jm-bottom .nav.menu {
+  li:hover > a,
+  li.active > a {
+    color: @JMstyle2InnerMenuActiveFontColor;
+  }
+  > li {
+    border-bottom: 1px solid @JMstyle2InnerMenuBorderColor;
+  }
+  > li.parent:after {
+    border-color: transparent @JMstyle2InnerMenuArrowColor transparent transparent;
+    border-color: rgba(0,0,0,0) @JMstyle2InnerMenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+  > li.parent.deeper:after {
+    border-color: @JMstyle2InnerMenuArrowColor transparent transparent transparent;
+    border-color: @JMstyle2InnerMenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+}
+
+/** top-bar menu **/
+#jm-top-bar-mod .nav.menu {
+  > li a.color {
+    background: @JMstyle2TopbarMenuColorLinkBackground;
+  }
+  > li:hover a.color {
+    background: @JMstyle2TopbarMenuColorLinkActiveBackground;
+  }
+}
+
+/** nav-stacked **/
+.nav-tabs.nav-stacked li a:hover {
+  color: @JMstyle2Link;
+}
+
+// Scaffolding
+// -------------------------- 
+
+a {
+  color: inherit;
+  &:hover {
+    color: @JMstyle2Link;
+  }
+}
+
+.jm-bottom a:hover {
+  color: @JMstyle2InnerLink;
+}
+
+.jm-module.white-ms a:hover {
+  color: @JMstyle2Link;
+}
+
+::selection {
+  background: @JMstyle2;
+  color: @JMwhite;
+}
+::-webkit-selection {
+  background: @JMstyle2;
+  color: @JMwhite;
+}   
+::-moz-selection {
+  background: @JMstyle2;
+  color: @JMwhite;
+}
+
+ul li {
+  background-image: url('../images/style2/li_RTL.png');
+}
+
+.jm-module.white-ms ul li {
+  background-image: url('../images/style2/li_RTL.png');
+}
+
+ul.jm-color li {
+  background-image: url('../images/style1/li_RTL.png');
+}
+
+ul.jm-color2 li {
+  background-image: url('../images/style3/li_RTL.png');
+}
+
+// Modules
+// -------------------------- 
+
+.jm-module.title-color-ms .jm-title {
+  color: @JMstyle2TitleColorModuleTitle;
+}
+
+/** search **/
+#jm-allpage .jm-search button.button,
+#jm-allpage .jm-search input.button {
+  background-image: url("../images/style2/search.png");
+}
+
+// Buttons & Readmore
+// -------------------------- 
+
+.btn,
+a.button,
+input.button,
+button.button,
+.jm-module.white-ms .btn,
+.jm-module.white-ms a.button,
+.jm-module.white-ms input.button,
+.jm-module.white-ms button.button {
+  color: @JMbuttonFontColor!important;
+  #gradient .vertical(@JMstyle2ButtonBackground, @JMstyle2ButtonActiveBackground);
+  text-shadow: 0px -1px 1px @JMstyle2ButtonTextShadow;
+  .box-shadow(inset 0px -1px 1px 0px @JMstyle2ButtonBorderColor);
+  &:hover {
+    background: @JMstyle2ButtonActiveBackground;
+  }
+}
+
+.jm-bottom {
+  .btn,
+  a.button,
+  input.button,
+  button.button {
+    color: @JMstyle2ButtonInnerFontColor!important;
+    .box-shadow(inset 0px -1px 1px 0px @JMstyle2ButtonBorderColor);
+  }
+}
+
+p.readmore a,
+a.readmore,
+.mod-articles-category-readmore a,
+.jm-module.white-ms p.readmore a,
+.jm-module.white-ms a.readmore,
+.jm-module.white-ms .mod-articles-category-readmore a {
+  color: @JMstyle2ReadmoreFontColor!important;
+  &:hover {
+    color: @JMstyle2ReadmoreFontColor!important;
+  }
+}
+
+.jm-bottom p.readmore a,
+.jm-bottom a.readmore,
+.jm-bottom .mod-articles-category-readmore a {
+  &:hover {
+    color: @JMstyle2ReadmoreInnerActiveFontColor!important;
+  }    
+}
+
+#jm-allpage {
+  .readmore2,
+  .jm-module.white-ms .readmore2 {
+    border: 1px solid @JMstyle2Readmore2BorderColor;
+    color: @JMstyle2ReadmoreFontColor!important;
+    &:hover {
+      background: @JMstyle2Readmore2ActiveBackground;
+    }
+  }
+  .jm-bottom .readmore2 {
+    border: 1px solid @JMstyle2Readmore2BorderColor;
+    color: @JMstyle2ReadmoreInnerActiveFontColor!important;
+    &:hover {
+      background: @JMstyle2Readmore2InnerActiveFontColor;
+    }
+  }
+}
+
+// Heading
+// -------------------------- 
+
+.page-header h2,
+h2.item-title,
+.cat-children > h3,
+.contact-category > h2,
+.weblink-category > h2,
+.newsfeed > h2,
+.newsfeed-category > h2,
+.tag-category h2 {
+  a:hover {
+    color: @JMstyle2HeadingHoverColor;
+  }
+}
+
+// Dropdown
+// -------------------------- 
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  background: @JMstyle2ButtonDropdown;
+}
+
+// Pagination & Pager
+// --------------------------
+
+.pager li {
+  > a:hover, 
+  > span:hover {
+    background: @JMstyle2PaginationActiveBackground;
+  }
+}
+
+div.pagination ul li {
+  span.pagenav {
+    background: @JMstyle2PaginationActiveBackground;
+  }
+  a:hover {
+    background: @JMstyle2PaginationActiveBackground!important;
+  }
+}
+
+// Editor
+// -------------------------- 
+
+.ch-item.ch-first .ch-info,
+.ch-item.ch-second .ch-info .ch-info-back,
+.ch-item.ch-third .ch-info .ch-info-back {
+  background: @JMstyle2;
+}
+
+// DJCLASSIFIEDS
+// -------------------------- 
+    
+#dj-classifieds {
+  .djcf_items_blog .item_desc .label_title {
+    background: url("../images/style2/desc.png") no-repeat right top;
+  }
+  .blog_det .price .label_title {
+    background: url("../images/style2/price.png") no-repeat right top;
+  }
+  .blog_det .region .label_title {
+    background: url("../images/style2/region.png") no-repeat right top;
+  }
+  .blog_det .category .label_title {
+    background: url("../images/style2/category.png") no-repeat right top;
+  }
+  .blog_det .cf_box .label_title {
+    background: url("../images/style2/details.png") no-repeat right top;
+  }
+  .dj-item .general_det .djcf_contact span.row_label {
+    background: url("../images/style2/desc.png") no-repeat right top;
+  }
+  .dj-item .general_det .added span.row_label {
+    background: url("../images/style2/added.png") no-repeat right top;
+  }
+  .dj-item .general_det .user_name span.row_label {
+    background: url("../images/style2/created.png") no-repeat right top;
+  }
+  .dj-item .description h2 {
+    background: url("../images/style2/desc.png") no-repeat right top;
+  }
+  .dj-item .custom_det h2 {
+    background: url("../images/style2/details.png") no-repeat right top;
+  }
+  .dj-item .localization_det h2 {
+    background: url("../images/style2/region.png") no-repeat right top;
+  }
+  .dj-item .additional h2 {
+    background: url("../images/style2/details.png") no-repeat right top;
+  }
+  .dj-item .video_box h2 {
+    background: url("../images/style2/video.png") no-repeat right top;
+  }
+  .dj-item .djcf_comments h2 {
+    background: url("../images/style2/comments.png") no-repeat right top;
+  }
+  table.dj-items td.name h3 a:hover {
+    color: @JMstyle2;
+  }
+  .djcf_items_blog .item_img:after {
+    background: @JMstyle2;
+  }
+  .see_details_box {
+    border: 1px solid @JMstyle2ClassifiedsSeedetailsBorder;
+    &:hover {
+      background: @JMstyle2ClassifiedsSeedetailsActiveBackground;
+    }
+    a {
+      color: @JMstyle2ClassifiedsSeedetailsFont;
+    }
+  }
+  .button#ask_form_button,
+  .gm_drive_dir input.button {
+    border: 1px solid @JMstyle2ClassifiedsSeedetailsBorder!important;
+    color: @JMstyle2ClassifiedsSeedetailsFont!important;
+  }
+  .button#ask_form_button:hover,
+  .gm_drive_dir input.button:hover {
+    background: @JMstyle2ClassifiedsSeedetailsActiveBackground;
+  }
+  .dj-item .general_det .price_wrap {
+    background: @JMstyle2ClassifiedsPriceBackground;
+    border-bottom: 4px solid @JMstyle2ClassifiedsPriceBorder;
+    .row_negotiable {
+      color: @JMstyle2ClassifiedsPriceNegotiableFont;
+    }
+  }
+}
+
+/* module items */
+.mod_djclassifieds_items div.title a.title:after {
+  background: @JMstyle2;
+}
+
+.mod_djclassifieds_items div.title a.title:hover,
+.jm-module.white-ms .mod_djclassifieds_items div.title a.title:hover {
+  color: @JMstyle2HeadingHoverColor;
+}
+
+.jm-bottom {
+  .mod_djclassifieds_items div.title a.title:hover {
+    color: @JMstyle2Light;
+  }
+  .mod_djclassifieds_items div.title a.title:after {
+    background: @JMstyle2ButtonActiveBackground;
+  }
+  .mod_djclassifieds_items .item:before,
+  .mod_djclassifieds_items .item:after {
+    border-color: @JMstyle2InnerMenuBorderColor;
+  }
+  .mod_djclassifieds_items div.title span.category a.title_cat {
+    color: @JMstyle2Light;
+  }
+  .djcf_user_points .djcf_upoints_box {
+    border-bottom: 1px solid @JMstyle2InnerMenuBorderColor;
+  }
+}
+
+/* classifieds menu */
+.djcf_user_points,
+.djcf_user_menu,
+.jm-module.white-ms .djcf_user_points,
+.jm-module.white-ms .djcf_user_menu {
+  ul.menu li:hover > a,
+  ul.menu li.active > a {
+    color: @JMstyle2MenuActiveFontColor;
+  }
+}
+
+.jm-bottom .djcf_user_points,
+.jm-bottom .djcf_user_menu {
+  ul.menu {
+    li:hover > a,
+    li.active > a {
+      color: @JMstyle2InnerMenuActiveFontColor;
+    }
+    > li {
+      border-bottom: 1px solid @JMstyle2InnerMenuBorderColor;
+    }
+  }
+}
+
+/* classifieds menu arrows */
+/* V */
+.jm-bottom .djcf_menu .menu > li.active:after,
+.jm-bottom .djcf_menu .menu > li.active:hover:after {
+    border-color: @JMstyle2InnerMenuArrowColor transparent transparent transparent;
+    border-color: @JMstyle2InnerMenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+/* > */
+.jm-bottom .djcf_menu .menu > li:hover:after  {
+    border-color: transparent @JMstyle2InnerMenuArrowColor transparent transparent;
+    border-color: rgba(0,0,0,0) @JMstyle2InnerMenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+/* map intro buttons */
+
+#dj-classifieds .dj-additem .djmap_intro .button {
+  color: @JMbuttonFontColor!important;
+  #gradient .vertical(@JMstyle2ButtonBackground, @JMstyle2ButtonActiveBackground);
+  text-shadow: 0px -1px 1px @JMstyle2ButtonTextShadow;
+  .box-shadow(inset 0px -1px 1px 0px @JMstyle2ButtonBorderColor);
+  &:hover {
+    background: @JMstyle2ButtonActiveBackground;
+  }
+}
+
+/* MEDIATOOLS */
+
+.dj-slide-title a:hover,
+.dj-ctitle-in:hover,
+.dj-slide-desc-text a:hover {
+  color: @JMstyle2MediatoolsLinkHover!important;
+}
+
+.dj-tabber,
+.jm-module.white-ms .dj-tabber {
+  .dj-tab-active {
+    background: @JMstyle2MediatoolsTabberActiveTab !important;
+  }
+  .dj-tab-indicator-right {
+    background: url("../images/style2/dj-tabber-arrow-right.png") no-repeat left center !important;
+  }
+  .dj-tab-indicator-left {
+    background: url("../images/style2/dj-tabber-arrow-left.png") no-repeat left center !important;
+  }
+}
+
+.jm-bottom .dj-tabber {
+  .dj-tab-active {
+    background: @JMstyle2MediatoolsBottomTabberActiveTab !important;
+  }
+  .dj-tab-indicator-right {
+    background: url("../images/style2/dj-tabber-arrow-right-light.png") no-repeat left center !important;
+  }
+  .dj-tab-indicator-left {
+    background: url("../images/style2/dj-tabber-arrow-left-light.png") no-repeat left center !important;
+  }
+}
+
+.slider1-ms {
+  .dj-navigation-in .dj-next,
+  .dj-navigation-in .dj-prev,
+  .dj-navigation .dj-play,
+  .dj-navigation .dj-pause,
+  .navigation-container .next-button,
+  .navigation-container .prev-button,
+  .navigation-container .play-button,
+  .navigation-container .pause-button {
+    &:hover {
+      background-color: @JMstyle2MediatoolsNavigationHover;
+    }
+  }
+}
+
+.jm-bottom .slider1-ms {
+  .dj-navigation-in .dj-next,
+  .dj-navigation-in .dj-prev,
+  .dj-navigation .dj-play,
+  .dj-navigation .dj-pause,
+  .navigation-container .next-button,
+  .navigation-container .prev-button,
+  .navigation-container .play-button,
+  .navigation-container .pause-button {
+    &:hover {
+      background-color: @JMstyle2MediatoolsBottomNavigationHover;
+    }
+  }
+}

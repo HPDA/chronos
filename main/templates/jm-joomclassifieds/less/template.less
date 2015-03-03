@@ -1,0 +1,1493 @@
+    /*--------------------------------------------------------------
+# Copyright (C) joomla-monster.com
+# License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+# Website: http://www.joomla-monster.com
+# Support: info@joomla-monster.com
+---------------------------------------------------------------*/
+
+/* ==========================================================================
+   VARIABLES import
+   ========================================================================== */
+   
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+/* ==========================================================================
+   MIXINS import
+   ========================================================================== */
+  
+@import "template_mixins.less";
+@import "../../../plugins/system/jmframework/includes/assets/template/bootstrap/less/mixins.less";
+
+/* ==========================================================================
+   BOOTSTRAP OVERRIDE import
+   ========================================================================== */
+  
+@import "override/buttons.less";
+@import "override/button-groups.less";
+@import "override/forms.less"; 
+@import "override/scaffolding.less"; 
+
+/* ==========================================================================
+   TEMPLATE STYLES import
+   ========================================================================== */
+
+@import "layout.less";
+@import "modules.less";
+@import "editor.less";
+ 
+/* ==========================================================================
+   JOOMLA COMPONENT styles
+   ========================================================================== */
+  
+//article details  
+dl.article-info {
+  font-size: 12px;  
+  margin: 0 0 20px;
+  color: #444;
+  dd {
+    margin: 0;
+  }
+}
+
+.article-info-term {
+  display: none;
+}
+
+//intro image
+.item-image {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  max-width: 100%;
+}
+
+//rating and voting
+.content_rating {
+  clear: both;  
+  margin-bottom: 10px;
+}
+
+.content_vote {
+  label {
+    margin-right: 5px;
+  }
+}
+
+//accordion button that appears, e.g. on article categories view
+h3.page-header .btn [class^="icon-"],
+h3.page-header .btn [class*=" icon-"] {
+  margin-top: -2px!important;
+  vertical-align: middle;
+}
+
+#jm-allpage h3.page-header .btn.btn-mini {
+  height: @JMbuttonSmallHeight + 5;
+  line-height: @JMbuttonSmallHeight + 5;
+}
+
+h3.page-header.item-title {
+  border-bottom: 1px dotted @JMborder;
+  padding-bottom: 10px;
+}
+
+//article categories 
+.categories-list { 
+  .collapse {
+    padding: 0 0 0 20px;
+  }
+  h3.page-header {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    display: inline-block;
+    width: 100%;
+  }
+  div > .category-desc {
+    margin-bottom: 20px;
+  }
+}
+
+//article category blog
+.items-leading div[class*="leading-"],
+.items-row {
+  margin-bottom: @JMbaseSpace;
+  padding-bottom: @JMbaseSpace;
+  border-bottom: 1px dotted @JMborder;
+}
+
+.items-leading .leading:last-child,
+.items-row:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+//article category list
+.category-list {
+  h3.page-header {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    display: inline-block;
+    width: 100%;
+  }
+  .filters .btn-group label {
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+  }
+}
+
+//archived articles
+.archive .filters {
+   margin-bottom: 20px;
+}
+
+//contact categories
+.categories-list ul li {
+  h4 {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    font-weight: bold;
+  }
+  small.category-desc {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+  }
+}
+
+//contact single category
+.contact-category {
+  .btn-group span.label {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  input[type="text"] {
+    margin-top: 10px;
+  }
+}
+
+//featured contacts
+table.category {
+  width: 100%;
+  margin-top: 20px;
+  th {
+    font-weight: bold;
+  }
+  th, 
+  td {
+    border-top: 1px solid @JMveryLightGray;
+    line-height: 20px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+//single contact
+.contact #basic-details .thumbnail {
+  border: none;
+  .box-shadow(none);
+}
+
+.contact-position,
+.contact-address {
+  &.dl-horizontal dd {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &.dl-horizontal dt {
+    width: auto;
+  }
+  .jicons-text {
+    display: block;
+    margin-right: 10px;
+    min-width: 110px;
+    text-align: left;
+  }
+  .jicons-icons {
+    display: block;
+    margin-right: 10px;
+    min-width: 20px;
+    text-align: left;
+  }
+}
+
+//weblinks single category
+.weblink-category .btn-group {
+  label,
+  span.label {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
+.weblink-count {
+  display: inline-block;
+  width: 100%;
+  dt,
+  dd {
+    float: left;
+  }
+}
+
+.weblink-category input[type="text"] {
+  margin-top: 10px;
+}
+
+//news feed categories
+.newsfeed-count {
+  display: inline-block;
+  width: 100%;
+  dt,
+  dd {
+    float: left;
+  }
+}
+
+//news feed category
+.newsfeed-category {
+  .btn-group label,
+  .btn-group span.label {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  input[type="text"] {
+    margin-top: 10px;
+  }
+}
+
+//user profile
+.profile ul.btn-toolbar li {
+  background: none;
+  padding: 0;
+}
+
+.dl-horizontal dd,
+.dl-horizontal dt {
+  line-height: @JMbaseLineHeight;
+}
+
+.optional {
+  font-size: 0.8em;
+}
+
+//edit item page
+.icon-cancel {
+  background-position: -314px 0;  
+}
+
+.icon-eye {
+  background-position: -96px -120px;  
+}
+
+.icon-file-add {
+  background-position: -26px -25px;  
+}
+
+.icon-copy {
+  background-position: -26px -25px;
+}
+
+.icon-picture {
+  background-position: -457px -49px;
+}
+
+.edit {
+  .input-append .add-on, 
+  .input-append .btn, 
+  .input-append .btn-group {
+    margin-left: 0;
+  }  
+}
+
+//search component
+.phrases-box,
+  fieldset.only {
+    padding: 0 0 20px;
+    label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+} 
+
+fieldset.phrases {
+  padding-bottom: 20px;
+}
+ 
+div.search label[for="mod-search-searchword"] {
+  display: none;
+} 
+ 
+//tags
+.tags {
+  padding: 5px 0;
+}
+
+//tag-category
+.tag-category .form-inline label {
+  vertical-align: middle;
+  margin-right: 10px;
+} 
+
+.tag-category h2 {
+  margin-bottom: 30px;
+}
+
+.tag-category h3 {
+  margin-bottom: 20px;
+}
+
+.tag-category ul li {
+  padding: 0;
+  background: none;
+}
+
+.tag-category ul li:hover {
+  background: none!important;
+}
+
+.tag-category .tag-body {
+  padding: 20px 0;
+  display: block;
+}
+
+.tag-category .thumbnails > li,
+.tag-category .category > li {
+  background: none;
+  padding: 0;
+}
+
+.tag-category .thumbnails > li h3 {
+  font-size: 1em;
+}
+
+//joomla tooltip
+.tip-wrap {
+  z-index: 9999;  
+  .tip {
+  max-width: 250px;
+  padding: 10px 7px;
+  color: @JMbodyFont;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ebebeb;
+  .border-radius (6px);
+  font-size: 13px;
+  .opacity(100);
+  border: 1px solid #ebebeb;
+  }
+  .tip-top {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    top: -4px;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #ebebeb;
+    .opacity(100);
+  }
+  .tip-title {
+    font-weight: bold;
+  }
+}
+
+//framework button
+.btn.jmodedit {
+  z-index: 9999!important;
+  line-height: @JMbuttonHeight!important;
+}
+
+//chzn fix
+.chzn-container {
+  width: 220px!important;
+  color: @JMbodyFont;
+}
+
+.chzn-container .chzn-drop {
+  width: 218px!important;
+}
+
+.chzn-search input {
+  width: 100%!important;
+  max-width: 180px;
+}
+
+.chzn-choices li,
+.chzn-results li {
+  background-image: none!important;
+}
+
+//registration
+strong.red,
+span.star {
+  color: #ff0000;
+}
+
+//article-index
+.article-index {
+  border: 1px solid @JMborder;
+  margin-left: 10px;
+  padding: 20px;
+  .border-radius(5px);
+  background: @JMwhite;
+}
+
+/* ==========================================================================
+   JOOMLA MODULES styles
+   ========================================================================== */
+  
+//article categories
+.categories-module li {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+//article category
+#jm-allpage .category-module li {
+  background-image: none;
+  padding: 0;
+}
+
+#jm-allpage .category-module li > a {
+  display: block;
+  font-weight: normal;
+}
+
+//login module
+#form-login-username,
+#form-login-password {
+  label.element-invisible {
+    display: none;
+  }
+}
+
+#login-form ul li .icon-arrow-right {
+  display: none;
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 10px 0 0;
+  }
+}
+
+//newsflash module
+.newsflash {
+  display: inline-block;
+  width: 100%;
+  .readmore {
+    float: right;
+    margin: 10px 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+  .newsflash-title {
+   margin: 15px 0 0;
+   position: relative;
+   &:first-child {
+     margin: 0;
+    }
+  }
+  .newsflash-title,
+  p {
+    clear: both;
+  }
+  img {
+    max-width: 68px;
+  }
+}
+
+//language module
+.mod-languages li,
+.mod-languages ul {
+  background: none;
+  padding: 0;
+  list-style: none;
+}
+
+//forms
+.jm-module form#mod-finder-searchform,
+.jm-module form#login-form,
+.jm-module form.form-inline {
+  margin: 0;
+}
+
+/* ==========================================================================
+   BOOTSTRAP styles
+   ========================================================================== */
+
+// Breadcrumbs
+// --------------------------
+
+.breadcrumb {
+  margin: 0;
+  background: none;
+  padding: 0;
+  li {
+    padding: 0;
+    background: none;
+    text-shadow: none;
+  }
+  .divider {
+    padding: 0;
+    margin: 3px 5px;
+  }
+}
+
+.icon-location {
+  background-position: 0 -24px;
+}    
+
+// Hr
+// --------------------------
+
+hr {
+  background: @JMborder;
+  border: none;
+  height: 1px;
+}
+
+// Buttons
+// --------------------------
+
+p.readmore,
+p.mod-articles-category-readmore {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+//readmore
+p.readmore a,
+a.readmore,
+.mod-articles-category-readmore a {
+  font-size: @JMreadmoreFontSize;
+  line-height: 1.1em;
+  padding: 0 10px;
+  display: inline-block;
+  margin: 10px 0 0;
+  text-decoration: none!important;
+  text-transform: uppercase;
+  .box-shadow(none);
+  background: none!important;
+  text-shadow: none;
+  filter: none;
+  letter-spacing: normal;
+  font-weight: normal;
+  &::before,
+  &::after {
+    font-size: 16px;
+    display: inline-block;
+    .opacity(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  &::before {
+    margin-right: 5px;
+    content: '[';
+    .translateX(20px);
+  }
+  &::after {
+    margin-left: 5px;
+    content: ']';
+    .translateX(-20px);
+  }
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    .opacity(100);
+    .translateX(0px);
+  }
+}
+  
+.jm-bottom {
+  p.readmore a,
+  a.readmore,
+  .mod-articles-category-readmore a {
+    color: @JMreadmoreInnerFontColor!important;
+  }
+}
+ 
+p.mod-articles-category-readmore {
+  padding-bottom: 10px;
+}
+
+/* readmore 2 and 3 */
+
+#jm-allpage {
+  .readmore2,
+  .readmore3 {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    .border-radius(3px);
+    display: block;
+    padding: 9px 20px;
+    line-height: 1.1em;
+    .transition(all 0.2s ease-in);
+    width: 140px;
+    max-width: 100%;
+    text-decoration: none;
+  }
+  .readmore2:hover,
+  .jm-module.white-ms .readmore2:hover,
+  .jm-bottom .readmore2:hover,
+  .readmore3:hover {
+    color: @JMreadmore23ActiveFontColor!important;
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+  .readmore3 {
+    border: 1px solid @JMreadmore3BorderColor;
+    color: @JMreadmore3FontColor!important;
+  }
+  .readmore3:hover {
+    background: @JMreadmore3BackgroundColor;
+  }
+}
+
+//hide readmore icon
+p.readmore a.btn .icon-chevron-right {
+  display: none;
+} 
+ 
+ /* button in bottom3 */
+.jm-bottom {
+  .btn,
+  a.button,
+  input.button,
+  button.button {
+    #gradient .vertical(@JMbuttonInnerBackground, @JMbuttonInnerActiveBackground);
+    text-shadow: none;
+    &:hover,
+    &:active {
+        background: @JMbuttonInnerActiveBackground;
+    }
+  }
+}
+ 
+//white icons for buttons
+.btn [class^="icon-"], 
+.btn [class*=" icon-"] { 
+  background-image: url("../images/glyphicons-halflings-white.png");
+  margin-top: 4px;
+}
+
+//larger margin for some icons
+
+.btn {
+  .icon-file-add {
+    margin-top: 5px;
+  }
+}
+
+//white caret for buttons
+.btn .icon-cog {
+  margin-top: 1px;
+}
+.btn .caret { 
+  border-top: 4px solid @JMwhite;
+}
+
+.icons .btn-group {
+  margin-bottom: 5px;
+}
+
+//content vote input
+input.btn.btn-mini {
+  height: @JMbuttonMiniHeight;
+  line-height: 1em;
+}
+
+//fix for input height
+input.btn {
+  height: @JMbuttonHeight;
+}
+
+// Button-Groups
+// --------------------------
+
+.btn-group .btn.dropdown-toggle {
+  line-height: 15px;
+  padding: 4px 5px 2px;
+}  
+
+.btn-group.open .btn.dropdown-toggle {
+  .border-radius(5px 5px 0 0);
+}  
+
+#editor-xtd-buttons.btn-toolbar {
+  margin: 0;
+}
+
+// Dropdowns
+// --------------------------
+
+.dropdown-menu {
+  .border-radius (0);
+  .box-shadow (none);
+  margin: 0;
+  li {
+    background: none!important;
+    padding: 0;
+    a {
+        text-decoration: none;
+        border-bottom: none;
+    }
+  }
+}
+
+.btn-group > .dropdown-menu {
+  .border-radius (0); // rounded corners for article tools dropdown
+}
+
+// Layouts
+// --------------------------
+
+//reset padding for fluid layout
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Navs
+// --------------------------
+
+.nav.menu {
+  margin: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    background-image: none!important;
+  }
+  > li {
+    border-bottom: 1px solid @JMmenuBorderColor;
+  }
+  > li:last-child {
+    border-bottom: none;
+  }
+  > li:first-child > a {
+    padding-top: 0;
+  }
+  > li.parent {
+    position: relative;
+  }
+  > li.parent:after {
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4.5px 0 4.5px 5px;
+    border-color: transparent transparent transparent @JMmenuArrowColor;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) @JMmenuArrowColor;
+  }
+  > li.parent.deeper:after {
+    border-width: 5px 4.5px 0 4.5px;
+    border-color: @JMmenuArrowColor transparent transparent transparent;
+    border-color: @JMmenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+  ul {
+    padding: 0 0 0 20px;
+    margin: 0;
+  }
+  > li > ul {
+    padding-bottom: 5px;
+  }
+  li a {
+    background: none;
+    color: @JMmenuLinkColor;
+    font-size: 13px;
+    padding: 10px 20px 10px 0;
+    display: block;
+    text-decoration: none;
+  }
+  > li:first-child.parent:after {
+    top: 10px;
+  }
+  ul li a {
+    padding: 4px 0;
+  }
+}
+
+/** menu footer-mod **/
+    
+.jm-footer .nav.menu {
+  li a {
+    color: @JMmenuFootermodLinkColor;
+  }
+  li:hover > a,
+  li.active > a {
+    color: @JMmenuFootermodLinkActiveColor;
+  }
+  > li {
+    border-bottom: 1px solid @JMmenuFootermodBorderColor;
+  }
+  > li:last-child {
+    border-bottom: none;
+  }
+}
+
+/** menu bottom3 **/
+.jm-bottom .nav.menu {
+  li a {
+    color: @JMmenuInnerLinkColor;
+  }
+  > li:last-child {
+    border-bottom: none;
+  }
+}
+
+/** menu in module white-ms **/
+    
+.jm-module.white-ms .nav.menu {
+  li a {
+    color: @JMmenuLinkColor;
+  }
+  > li {
+    border-bottom: 1px solid @JMmenuBorderColor;
+  }
+  > li:last-child {
+    border-bottom: none;
+  }
+  > li.parent:after {
+    border-color: transparent transparent transparent @JMmenuArrowColor;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) @JMmenuArrowColor;
+  }
+  > li.parent.deeper:after {
+    border-color: @JMmenuArrowColor transparent transparent transparent;
+    border-color: @JMmenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+}
+
+/** top-bar menu **/
+
+#jm-top-bar-mod .nav.menu {
+  > li {
+    display: inline-block;
+    border: none;
+    background: none;
+    line-height: 50px;
+  }
+  > li a {
+    padding: 0 20px;
+    color: @JMmenuTopbarLinkColor;
+    font-size: 13px;
+    font-weight: 600;
+    border-left: 1px solid @JMmenuTopbarBorderColor;
+    background: @JMmenuTopbarBackgroundColor; 
+  }
+  > li:hover a,
+  > li.active a {
+    color: @JMmenuTopbarActiveFontColor;
+    background: @JMmenuTopbarBackgroundActiveColor;
+  }
+  > li a.color {
+    color: @JMtopbarMenuColorLinkActiveFontColor;
+    border-color: transparent;
+  }
+}
+
+#jm-top-bar-mod .nav.menu > li.parent:after, 
+#jm-top-bar-mod .nav.menu ul {
+  display: none;
+}
+
+/** tags **/
+.tagspopular ul,
+.tagssimilar ul,
+.nav.menu.tags,
+.tags .nav.menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  > li {
+    display: inline-block;
+    border: none;
+    background: none;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    &:after {
+      display: none;
+    }
+  }
+  > li a {
+    color: @JMtagsLinkColor;
+    padding: 3px 18px!important;
+    background: @JMtagsBackgroundColor;
+    border: 1px solid @JMtagsBorderColor;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    .border-radius(3px);
+  }
+  > li:hover a,
+  > li.active a {
+    color: @JMtagsActiveLinkColor!important;
+    border: 1px solid @JMtagsActiveBorderColor;
+    &:hover {
+      color: @JMtagsActiveLinkColor!important;
+    }
+  }
+  ul {
+    display: none;
+  }
+}
+
+.tagspopular ul,
+.tagssimilar ul {
+  > li {
+    margin: 0 6px 10px 0;
+  }
+  > li a {
+    padding: 6px 18px;
+  }
+}
+
+#jm-allpage .tags {
+  > span {
+    display: inline-block;
+    margin: 0 1px 10px 0;
+  }
+  > span a {
+    color: @JMtagsLinkColor;
+    padding: 3px 18px;
+    background: @JMtagsBackgroundColor;
+    border: 1px solid @JMtagsBorderColor;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    .border-radius(3px);
+    text-shadow: none;
+    text-decoration: none;
+    line-height: @JMbaseLineHeight;
+  }
+  > span:hover a {
+    color: @JMtagsActiveLinkColor;
+    border: 1px solid @JMtagsActiveBorderColor;
+  }  
+}
+
+// Pager
+// --------------------------
+  
+.pager li {
+  background-image: none!important;
+  padding: 0;
+  > a, 
+  > span {
+    padding: 0 15px;
+    line-height: 36px;
+    .transition(all 0.2s ease-in);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: @JMpaginationFontColor;
+    background: @JMpaginationBackground;
+    border-top: none;
+    border-bottom: 1px solid @JMpaginationBorderBottomColor;
+    border-left: 1px solid @JMpaginationBorderColor;
+    border-right: 1px solid @JMpaginationBorderColor;
+    .border-radius(5px);
+    .box-shadow(0 2px 1px -1px @JMpaginationBorderColor);
+  }
+  > a:hover {
+      color: @JMpaginationActiveFontColor;
+  }
+}
+
+// Pagination
+// --------------------------
+
+div.pagination {
+  padding: @JMbaseSpace 0 0;
+  margin: 0;
+  text-align: center;
+  clear: both;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  ul {
+    margin: 0;
+    .box-shadow(none);
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 36px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    background-image: none!important;
+  }
+  ul li span,
+  ul li a {
+    line-height: 36px;
+    display: inline-block;
+    padding: 0 15px;
+    .transition(all 0.2s ease-in);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: @JMpaginationFontColor;
+    background: @JMpaginationBackground;
+    border-top: none;
+    border-bottom: 1px solid @JMpaginationBorderBottomColor;
+    border-left: 1px solid @JMpaginationBorderColor;
+    .border-radius(5px)!important;
+    border-right: 1px solid @JMpaginationBorderColor;
+    .box-shadow(0 2px 1px -1px @JMpaginationBorderColor);
+  }
+  ul li span.pagenav {
+    color: @JMpaginationActiveFontColor;
+  }
+  ul li.pagination-start span.pagenav,
+  ul li.pagination-prev span.pagenav,
+  ul li.pagination-start a.pagenav,
+  ul li.pagination-prev a.pagenav,
+  ul li.pagination-next span.pagenav,
+  ul li.pagination-end span.pagenav,
+  ul li.pagination-next a.pagenav,
+  ul li.pagination-end a.pagenav { 
+    background: @JMpaginationBackground;
+  }
+  ul li.pagination-start span.pagenav,
+  ul li.pagination-prev span.pagenav,
+  ul li.pagination-next span.pagenav,
+  ul li.pagination-end span.pagenav {
+    color: @JMpaginationInactiveFontColor;
+  }
+  ul li a:hover {
+    color: @JMpaginationActiveFontColor!important;
+  }
+}
+
+p.counter {
+  float: none !important;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+// Accordion
+// --------------------------  
+  
+.accordion-group {
+  border: none;
+  margin: 0 0 -1px;
+}
+
+.accordion-inner {
+  border: 1px solid @JMaccordionBorderColor;
+  border-top: none;
+  background: @JMaccordionBackgroundColor;
+  padding: 20px;
+}
+
+.accordion-heading .accordion-toggle {
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px!important;
+  font-weight: 600;
+  padding: 20px 30px;
+  display: block;
+  color: @JMaccordeonFontColor;
+  text-decoration: none;
+  .transition(all 0.2s ease-in); 
+  border: 1px solid @JMaccordionBorderColor;
+  background: @JMaccordionBackgroundColor;
+  line-height: 1.2em;
+}
+
+.accordion-group:first-child .accordion-heading .accordion-toggle {
+  .border-radius(5px 5px 0 0);
+}
+.accordion-group:last-child .accordion-heading .accordion-toggle {
+  .border-radius(0 0 5px 5px);
+}
+
+// accordeon in articles
+.pane-sliders {
+  margin-top: 1px;
+  div.panel h3.title {
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 13px!important;
+    font-weight: 600;
+  }
+  div.panel h3.title.pane-toggler-down {
+    border-bottom: 1px solid @JMaccordionBorderColor;
+  }
+  div.panel h3.title a {
+    padding: 20px 30px;
+    display: block;
+    color: @JMaccordeonFontColor;
+    text-decoration: none;
+    .transition(all 0.2s ease-in);  
+  }
+}
+
+.panel {
+  margin-top: -1px;
+  border: 1px solid @JMaccordionBorderColor;
+  background: @JMaccordionBackgroundColor;
+  .panel:nth-child(2) {
+    .border-radius(5px 5px 0 0);
+  }
+  .panel:last-child {
+    .border-radius(0 0 5px 5px);
+  }
+}
+
+.pane-slider.content {
+  padding: 0 20px;
+}
+
+.pane-slider.content.pane-down {
+  padding: 20px!important;
+}
+
+
+// Tabs
+// --------------------------
+
+.nav-tabs {
+  border: none;
+  margin: 0;
+  > li {
+      background-image: none!important;
+      padding: 0;
+      margin: 0 0 0 1px;
+      > a {
+        border: none!important;
+        color: @JMtabsFontColor;
+        padding: 13px 22px;
+        margin: 0;
+        text-decoration: none;
+        font-size: 13px!important;
+        font-weight: 600;
+        .border-radius(0);
+        line-height: 1.2em;
+      }
+      &:first-child {
+       margin: 0;
+      } 
+  }
+  > li.active a,
+  > li:hover a {
+  background: @JMtabsBackgroundColor!important;
+  .border-radius(5px 5px 0 0);
+  }  
+}
+
+.tab-content {
+  clear: both;
+  margin: 0;
+  padding: 25px;
+  border: 6px solid @JMtabsBackgroundColor;
+  .border-radius(0 5px 5px 5px);
+  background: @JMtabsContentBackground;
+  overflow: visible;
+}
+
+//tabs in articles
+
+dl.tabs {
+  display: inline-block;
+  padding: 10px 0 0;
+  margin: 0;
+  vertical-align: top;
+  dt.tabs {
+    float: left;
+    padding: 13px 25px;
+    margin: 0 1px 0 0;
+    .transition(background 0.2s ease-in);  
+  }
+  dt.tabs h3 {
+    font-size: 13px!important;
+    font-weight: 600;
+    margin: 0;
+  }
+  dt.tabs.open,
+  dt.tabs.closed:hover {
+    background: @JMtabsBackgroundColor;
+    .border-radius(5px 5px 0 0);
+  }
+  dt.tabs.open h3 a,
+  dt.tabs.closed h3 a {
+    text-decoration: none;
+    color: @JMtabsFontColor;
+  }
+  dt.tabs.open {
+    position: relative;
+  }
+}
+
+dd.tabs {
+  clear: both;
+  margin: 0;
+  padding: 25px;
+  border: 6px solid @JMtabsBackgroundColor;
+  .border-radius(0 5px 5px 5px);
+  background: @JMtabsContentBackground;
+}
+
+// Nav-stacked
+// ---------------------------
+
+.nav-tabs.nav-stacked {
+  font-family: inherit;
+  list-style-position:inside;
+  list-style-type:decimal;
+  li {
+      background: none!important;
+      font-style: normal;
+      float: none;
+      margin: 0;
+      padding: 0;
+      a {
+        color: inherit;
+        font-style: normal;
+        cursor: pointer;
+        text-transform: none;
+        font-weight: inherit;
+        border: none!important;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        line-height: @JMbaseLineHeight;
+        background: none!important;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  }
+  li.active {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Table
+// --------------------------
+
+.calendar table {
+  border-collapse: separate;
+}
+
+table,
+.table-bordered {
+  border-collapse: collapse;
+}
+
+table,
+table.category td,
+table.category th {
+  border: none!important;
+  line-height: @JMbaseLineHeight;
+}
+
+table.category {
+  td {
+    background: none!important;
+  }
+  tbody tr {
+    border-top: 1px dotted @JMtableRowBorder!important;
+  }
+  tbody tr:first-child {
+    border: none!important;    
+  }
+}
+
+#jm-allpage table thead tr th {
+  padding: 15px 8px;
+  font-weight: 600;
+  background: @JMtableHeadBackground;
+  text-align: center!important;
+  color: @JMtableHeadFontColor;
+  a {
+    color: @JMtableHeadFontColor;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+    }
+  }
+} 
+
+#jm-allpage table thead tr th:first-child {
+  .border-radius(5px 0 0 5px);
+}
+
+#jm-allpage table thead tr th:last-child {
+  .border-radius(0 5px 5px 0);
+}
+
+// Headings
+// --------------------------
+
+h2.item-title,
+.page-header h2,
+.cat-children > h3,
+.contact-category > h2,
+.content-category > h2,
+.weblink-category > h2,
+.tag-category h3,
+.newsfeed > h2,
+.newsfeed-category > h2 {
+  color: @JMheadingColor;
+  display: block;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  a:hover {
+    text-decoration: none;
+    .transition(all 0.2s ease-in);
+  }
+}
+
+h1.componentheading,
+.category-list > h2,
+.tag-category > h2,
+.page-header > h1,
+.blog > h2,
+.blog-featured > h1,
+.login > h1,
+.registration > h1 {
+  color: @JMheadingColor;
+  font-weight: 600;
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    background: @JMheadingBorderColor;
+    bottom: 0;
+    left: 0;
+  } 
+}
+
+// Type
+// --------------------------
+
+p {
+  margin: 5px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h1, h2, h3 {
+  line-height: 1.2em;
+}
+
+h4, h5, h6 {
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.6em;    
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.page-header {
+  margin: 0 0 20px;
+  border-bottom: none;
+  padding-bottom: 0;
+  h2 {
+    margin: 0;
+  }
+}
+
+ul {
+  margin: 5px 0;
+  list-style: none;
+}
+
+//bootstrap override li line-height
+ul li {
+  line-height: @JMbaseLineHeight;
+}
+
+ul ul, 
+ul ol, 
+ol ol, 
+ol ul {
+  margin-bottom: 5px;
+}
+
+ul li {
+  margin: 0;
+  padding: 0 0 0 12px;
+  background-repeat: no-repeat;
+  background-position: left 9px;
+}
+
+.jm-bottom ul li {
+  background-image: url('../images/li_white.png');
+}
+
+a.close {
+  text-decoration: none;
+}
+
+#lbPrevLink, #lbNextLink {
+  .transition(none);
+}
